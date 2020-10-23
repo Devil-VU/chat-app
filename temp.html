@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/style.css">
+  <link rel="stylesheet" href="./public/css/login.css">
+    <link rel="stylesheet" href="./public/css/chat.css">
+</head>
+<body>
+    <div class="chat-screen">
+        <div class="chat-container">
+            <div class="header">MindX Chat</div>
+            <div class="main">
+                <div class="aside-left">
+                    <div class="create-conversation">
+                        <button class="btn">+ New Conversation</button>
+                    </div>
+                    <div class="list-conversations">
+                    <div class="current conversation">
+                        <div class="left-conversation-title">
+                            First Conversation
+                        </div>
+                        <div class="num-of-user">
+                            2 Users
+                        </div>
+                    </div>
+                        <div class="conversation">
+                            <div class="left-conversation-title">
+                                Second Conversation
+                            </div>
+                            <div class="num-of-user">
+                                2 Users
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="conversation-detail">
+                <div class="conversation-title">First Conversation</div>
+                <div class="list-messages">
+                    <div class="message-mine message">
+                        <div class="message-content">hello</div>
+                    </div>
+                    <div class="message-other message" >
+                        <div class="owner">Nguyen Van A</div>
+                        <div class="message-content">Hello everyone</div>
+                    </div>
+                </div>
+                <form id="send-message-form">
+                        <input type="text" placeholder="Type a message" name="message">
+                    <button class="btn" id="sendMessage">Send</button>
+                </form>
+            </div>
+            </div>
+            </div>
+        </div> 
+    </div>
+</body>
+</html>

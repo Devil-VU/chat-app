@@ -1,0 +1,37 @@
+/* Làm phần style chung cho các trang */
+/* * là áp dụng cho mọi thẻ */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family:'Roboto',sans-serif;
+}
+.input-wrapper {
+    margin-bottom: 10px;
+}
+.input-wrapper input {
+    padding: 12px 10px;
+    border-radius: 5px;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+}
+.btn {
+    padding: 12px 5px;
+    color: #ffff;
+    background: #037BFE;
+    border-radius: 3px;
+    border-width: 1px;
+    font-size: 16px ;
+    cursor: pointer;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.cursor-pointer{
+    cursor: pointer;
+    font-weight: 550;
+}
+.err {
+    color: red;
+    font-size: 14px;
+    padding: 2px 2px;
+}

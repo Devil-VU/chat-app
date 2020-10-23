@@ -1,0 +1,37 @@
+/* chứa style của màn hình register */
+.register-container {
+    height: 100vh;
+    display: flex;
+}
+.register-container .background-img {
+    width: 70%;
+    height: 100%;
+    background-image: url(../image/pexels-pixabay-273238.jpg);
+    background-size: cover;
+}
+.register-container .form-wrapper {
+    height: 100%;
+    width: 30%;
+}
+.register-container .register-header {
+    text-align: center;
+    font-size: 40px;
+    margin: 40px 0 25px 0;
+    color: gray;
+    font-weight: 500;
+}
+.register-container #register-form {
+    padding: 0 20px;
+}
+.register-container .name-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+.register-container .name-wrapper .input-wrapper {
+    width: 48%;
+}
+.register-container .register-form-action {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
