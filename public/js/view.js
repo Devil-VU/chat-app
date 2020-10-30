@@ -30,7 +30,7 @@ view.setActiveScreen = (screenName, fromCreate = false) => {
             view.showListConversation()
         }
         document.querySelector('.create-conversation button').addEventListener('click', () => {
-            view.setActiveScreen('createConversationScreen',)
+            view.setActiveScreen('createConversationScreen')
         })
      break
         // case go to create conversation Screen 
@@ -48,7 +48,6 @@ view.setActiveScreen = (screenName, fromCreate = false) => {
                     email: createConversationForm.email.value
                 }
                 controller.createConversation(data)
-
             })
 
 

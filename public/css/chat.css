@@ -30,6 +30,7 @@
     border-radius: 10px;
     max-width: 40%;
     margin-top: 3px;
+    word-break: break-all;
 }
 .list-messages .message-mine.message {
     display: flex;

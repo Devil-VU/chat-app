@@ -68,10 +68,27 @@ model.listenCoversationChange = () => {
           }
           if(dataChange.id === model.currentConversation.id) {
             model.currentConversation = dataChange
-             view.addMessage(model.currentConversation.messages[model.currentConversation.messages.length -1])
+             view
+             .addMessage(model.currentConversation.messages[model.currentConversation.messages.length -1])
              view.scrollToEndElm()
           }
       }
+      else if (elem.type === 'added') {
+        const dataChange = getDataFromDoc(elem.doc)
+        console.log(dataChange)
+        model.conversations.push(dataChange)
+        view.addConversation(dataChange)
+      }
     }
   })
+}
+model.addConversation = ({title, email}) => {
+  const dataToAdd = {
+    title,
+    createdAt: new Date().toISOString(),
+    messages: [],
+    users: [model.currentUser.email, email]
+  }
+  firebase.firestore().collection('conversations').add(dataToAdd)
+  view.setActiveScreen('chatScreen', true)
 }
