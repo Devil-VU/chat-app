@@ -6,6 +6,14 @@
  box-sizing: border-box;
  font-family:'Roboto',sans-serif;
 }
+.header {
+    background-color: #037BFE;
+    color: #fff;
+    height: 64px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 64px;
+}
 .input-wrapper {
     margin-bottom: 10px;
 }
@@ -34,4 +42,8 @@
     color: red;
     font-size: 14px;
     padding: 2px 2px;
+}
+.btn-light {
+    color: #333;
+    background-color: #fafafa;
 }

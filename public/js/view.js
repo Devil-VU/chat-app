@@ -1,5 +1,5 @@
 const view = {}
-view.setActiveScreen = (screenName) => {
+view.setActiveScreen = (screenName, fromCreate = false) => {
     switch(screenName) {
         // case go to welcomeScreen
         case 'chatScreen' :
@@ -19,13 +19,40 @@ view.setActiveScreen = (screenName) => {
             sendMessageForm.message.value =''
         }
         })
-           //lay cac cuoc hoi thoai ve
+        if(!fromCreate) {
+        //lay cac cuoc hoi thoai ve
         model.getConversations()
-
         // lang nghe thay doi cua cac cuoc hoi thoai
-        model.listenCoversationChange() 
+        model.listenCoversationChange()
+        }
+        else {  
+            view.showCurrentConversation()
+            view.showListConversation()
+        }
+        document.querySelector('.create-conversation button').addEventListener('click', () => {
+            view.setActiveScreen('createConversationScreen',)
+        })
+     break
+        // case go to create conversation Screen 
+        case 'createConversationScreen' :
+            document.getElementById('app').innerHTML 
+            = components.createConversationScreen
+            document.getElementById('backToChat').addEventListener('click', () => {
+                view.setActiveScreen('chatScreen', true);
+            })
+            const createConversationForm = document.querySelector('#create-conversation-form')
+            createConversationForm.addEventListener('submit', (e) => {
+                e.preventDefault()
+                const data = {
+                    title : createConversationForm.title.value,
+                    email: createConversationForm.email.value
+                }
+                controller.createConversation(data)
 
-    break
+            })
+
+
+        break
 
         //  case go to registerScreen
         case 'registerScreen' :

@@ -34,8 +34,8 @@ window.onload = init
 firestoreQueries = async () => {
   // get once document
 
-  // const response = await  firebase.firestore().collection('Users')
-  //   .doc('24ccxiX6dRezcIA8hvWo').get()
+  // const response = await  firebase.firestore().collection('conversations')
+  //   .doc('NqxoxnoZ6zs1hDTyta7u').get()
   //   const user = getDataFromDoc(response)
   //   console.log(user)
 
@@ -83,3 +83,4 @@ getDataFromDoc = (res) => {
 getDataFromDocs = (docs) => {
   return docs.map(getDataFromDoc)
 }
+

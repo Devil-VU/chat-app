@@ -83,3 +83,23 @@ components.loginScreen=`
         </div>
     </div>
 `
+components.createConversationScreen = `
+<div class="create-conversation-container">
+<div class="header"> App Chat </div>
+<form id="create-conversation-form" style="padding: 60px 30%;">
+    <h3 style="padding: 20px;">Create new conversation</h3>
+        <div class="input-wrapper">
+            <input type="text" name="title" placeholder="Conversation Name">
+            <div id="conversation-title-error" class="err"></div>
+        </div>
+        <div class="input-wrapper">
+            <input type="email" name="email" placeholder="Friend Email">
+            <div id="conversation-email-error" class="err"></div>
+        </div>
+        <div class="action">
+            <button type="submit" class="btn">Save</button>
+            <button id="backToChat" type="button" class="btn btn-light">Cancel</button>
+        </div>
+</form>
+</div>
+`

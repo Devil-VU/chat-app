@@ -7,54 +7,25 @@
     <link rel="stylesheet" href="./public/css/style.css">
   <link rel="stylesheet" href="./public/css/login.css">
     <link rel="stylesheet" href="./public/css/chat.css">
+    <link rel="stylesheet" href="./public/css/creNewCon.css">
 </head>
 <body>
-    <div class="chat-screen">
-        <div class="chat-container">
-            <div class="header">MindX Chat</div>
-            <div class="main">
-                <div class="aside-left">
-                    <div class="create-conversation">
-                        <button class="btn">+ New Conversation</button>
-                    </div>
-                    <div class="list-conversations">
-                    <div class="current conversation">
-                        <div class="left-conversation-title">
-                            First Conversation
-                        </div>
-                        <div class="num-of-user">
-                            2 Users
-                        </div>
-                    </div>
-                        <div class="conversation">
-                            <div class="left-conversation-title">
-                                Second Conversation
-                            </div>
-                            <div class="num-of-user">
-                                2 Users
-                            </div>
-                        </div>
-                    </div>
+    <div class="create-conversation-container">
+        <div class="header"> App Chat </div>
+        <form id="create-conversation-form" style="padding: 60px 30%;">
+            <h3 style="padding: 20px;">Create new conversation</h3>
+                <div class="input-wrapper">
+                    <input type="text" placeholder="Conversation Name">
                 </div>
-            <div class="conversation-detail">
-                <div class="conversation-title">First Conversation</div>
-                <div class="list-messages">
-                    <div class="message-mine message">
-                        <div class="message-content">hello</div>
-                    </div>
-                    <div class="message-other message" >
-                        <div class="owner">Nguyen Van A</div>
-                        <div class="message-content">Hello everyone</div>
-                    </div>
+                <div class="input-wrapper">
+                    <input type="email" name="title" placeholder="Friend Email">
+                    <div id="conversation-email-error" class="err"></div>
                 </div>
-                <form id="send-message-form">
-                        <input type="text" placeholder="Type a message" name="message">
-                    <button class="btn" id="sendMessage">Send</button>
-                </form>
-            </div>
-            </div>
-            </div>
-        </div> 
+                <div class="action">
+                    <button type="submit" class="btn">Save</button>
+                    <button type="button" class="btn btn-light">Cancel</button>
+                </div>
+        </form>
     </div>
 </body>
 </html>
